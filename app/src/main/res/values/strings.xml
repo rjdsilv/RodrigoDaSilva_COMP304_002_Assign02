@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Cine Tickets Mobile</string>
+    <string name="logo_description">Application Logo</string>
+    <string name="lbl_buy_tickets">Buy Tickets</string>
+</resources>
