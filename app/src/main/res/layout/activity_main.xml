@@ -27,7 +27,10 @@
             android:id="@+id/btnBuyTickets"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
+            android:background="@drawable/app_button"
+            android:onClick="onBuyTicketsClick"
+            android:paddingLeft="@dimen/buttonPadding"
+            android:paddingRight="@dimen/buttonPadding"
             android:text="@string/lbl_buy_tickets"
             android:textColor="@android:color/white" />
     </TableRow>
