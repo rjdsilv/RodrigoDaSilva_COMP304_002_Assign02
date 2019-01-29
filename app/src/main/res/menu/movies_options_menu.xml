@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/movieGlass"
+        android:icon="@drawable/ic_movie_48"
+        android:title="@string/lbl_glass" />
+    <item
+        android:id="@+id/movieBumblebee"
+        android:icon="@drawable/ic_movie_48"
+        android:title="@string/lbl_bumblebee" />
+    <item
+        android:id="@+id/movieEscapeRoom"
+        android:icon="@drawable/ic_movie_48"
+        android:title="@string/lbl_escape_room" />
+    <item
+        android:id="@+id/movieReplicas"
+        android:icon="@drawable/ic_movie_48"
+        android:title="@string/lbl_replicas" />
+    <item
+        android:id="@+id/movieAquaman"
+        android:icon="@drawable/ic_movie_48"
+        android:title="@string/lbl_aquaman" />
+</menu>

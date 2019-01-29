@@ -13,7 +13,7 @@
 
         <ImageView
             android:id="@+id/ivwAppLogo"
-            android:contentDescription="@string/logo_description"
+            android:contentDescription="@string/desc_logo"
             android:src="@drawable/cineplex_logo" />
     </TableRow>
 
@@ -29,8 +29,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/app_button"
             android:onClick="onBuyTicketsClick"
-            android:paddingLeft="@dimen/buttonPadding"
-            android:paddingRight="@dimen/buttonPadding"
+            android:paddingLeft="@dimen/main_screen_button_padding"
+            android:paddingRight="@dimen/main_screen_button_padding"
             android:text="@string/lbl_buy_tickets"
             android:textColor="@android:color/white" />
     </TableRow>

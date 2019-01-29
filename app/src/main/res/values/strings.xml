@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">Cine Tickets Mobile</string>
-    <string name="logo_description">Application Logo</string>
+
+    <string name="desc_logo">Application Logo</string>
+    <string name="desc_glass">Glass image view</string>
+    <string name="desc_bumblebee">Bumblebee image view</string>
+    <string name="desc_escape_room">Escape Room image view</string>
+
     <string name="lbl_buy_tickets">Buy Your Tickets</string>
+    <string name="lbl_now_playing">Now Playing</string>
+    <string name="lbl_select">Select</string>
+    <string name="lbl_glass">Glass</string>
+    <string name="lbl_bumblebee">Bumblebee</string>
+    <string name="lbl_escape_room">Escape Room</string>
+    <string name="lbl_replicas">Replicas</string>
+    <string name="lbl_aquaman">Aquaman</string>
 </resources>
