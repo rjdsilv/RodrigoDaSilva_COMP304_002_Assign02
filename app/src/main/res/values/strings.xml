@@ -8,10 +8,32 @@
 
     <string name="lbl_buy_tickets">Buy Your Tickets</string>
     <string name="lbl_now_playing">Now Playing</string>
+    <string name="lbl_show_times">Show Times</string>
     <string name="lbl_select">Select</string>
+    <string name="lbl_selected_movie">Selected movie: </string>
     <string name="lbl_glass">Glass</string>
     <string name="lbl_bumblebee">Bumblebee</string>
     <string name="lbl_escape_room">Escape Room</string>
     <string name="lbl_replicas">Replicas</string>
     <string name="lbl_aquaman">Aquaman</string>
+    <string name="lbl_choose_time">Select the time</string>
+    <string name="lbl_12_50">12:50pm</string>
+    <string name="lbl_02_15">02:15pm</string>
+    <string name="lbl_04_45">04:45pm</string>
+    <string name="lbl_06_50">06:50pm</string>
+    <string name="lbl_08_50">08:50pm</string>
+    <string name="lbl_ticket_type_selection">Ticket selection</string>
+    <string name="lbl_selected_time">Selected time:</string>
+    <string name="lbl_select_tickets">Select tickets</string>
+    <string name="lbl_adult">Adult</string>
+    <string name="lbl_children">Children</string>
+    <string name="lbl_checkout">Checkout</string>
+
+    <string-array name="ticket_quantity_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>

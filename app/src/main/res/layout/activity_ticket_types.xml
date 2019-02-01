@@ -3,111 +3,175 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".MovieShowtimeActivity">
+    tools:context=".TicketTypesActivity">
 
     <TableRow android:background="@color/colorAccent">
 
         <TextView
-            android:id="@+id/lblShowTimes"
+            android:id="@+id/lblTicketType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dimen_10dp"
             android:layout_weight="1"
-            android:paddingTop="15dp"
             android:paddingStart="@dimen/dimen_10dp"
+            android:paddingTop="15dp"
             android:paddingEnd="@dimen/dimen_10dp"
             android:paddingBottom="@dimen/dimen_5dp"
-            android:text="@string/lbl_show_times"
+            android:text="@string/lbl_ticket_type_selection"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:typeface="sans" />
     </TableRow>
+
     <TableRow>
+
         <TextView
             android:id="@+id/lblSelectedMovie"
             android:layout_width="144dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dimen_10dp"
             android:layout_weight="1"
-            android:paddingTop="15dp"
             android:paddingStart="@dimen/dimen_10dp"
+            android:paddingTop="15dp"
             android:paddingEnd="@dimen/dimen_10dp"
             android:text="@string/lbl_selected_movie"
             android:textColor="@color/colorPrimaryVeryDark"
             android:textSize="18sp"
             android:textStyle="bold"
             android:typeface="sans" />
+
         <TextView
             android:id="@+id/lblSelectedMovieValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dimen_10dp"
-            android:paddingStart="@dimen/dimen_10dp"
-            android:paddingEnd="@dimen/dimen_10dp"
             android:layout_weight="1"
+            android:paddingStart="@dimen/dimen_10dp"
             android:paddingTop="15dp"
+            android:paddingEnd="@dimen/dimen_10dp"
             android:textColor="@color/colorPrimaryVeryDark"
             android:textSize="18sp"
             android:typeface="sans" />
     </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/lblSelectedTime"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingTop="@dimen/dimen_5dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:text="@string/lbl_selected_time"
+            android:textColor="@color/colorPrimaryVeryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/lblSelectedTimeValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingTop="@dimen/dimen_5dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:textColor="@color/colorPrimaryVeryDark"
+            android:textSize="18sp"
+            android:typeface="sans" />
+    </TableRow>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="@dimen/dimen_5dp"
-        android:background="@android:color/darker_gray"/>
+        android:background="@android:color/darker_gray" />
+
     <TableRow>
+
         <TextView
             android:id="@+id/lblAvailableTimes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dimen_10dp"
             android:layout_weight="1"
-            android:paddingTop="15dp"
             android:paddingStart="@dimen/dimen_10dp"
+            android:paddingTop="15dp"
             android:paddingEnd="@dimen/dimen_10dp"
-            android:text="@string/lbl_choose_time"
+            android:text="@string/lbl_select_tickets"
             android:textColor="@color/colorPrimaryVeryDark"
             android:textSize="18sp"
             android:textStyle="bold"
             android:typeface="sans" />
     </TableRow>
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/rgpSelectTimes">
 
-        <RadioButton
-            android:id="@+id/rdo1250"
+    <TableRow>
+
+        <CheckBox
+            android:id="@+id/chkAdult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_10dp"
-            android:text="@string/lbl_12_50"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/lbl_adult"
             android:textSize="16sp" />
-        <RadioButton android:id="@+id/rdo0215"
+
+        <TextView
+            android:id="@+id/lblAdultPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spnAdult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/ticket_quantity_array"/>
+    </TableRow>
+
+    <TableRow>
+        <CheckBox
+            android:id="@+id/chkChildren"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_10dp"
-            android:text="@string/lbl_02_15"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/lbl_children"
             android:textSize="16sp" />
-        <RadioButton android:id="@+id/rdo0445"
+
+        <TextView
+            android:id="@+id/lblChildPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spnChildren"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_10dp"
-            android:text="@string/lbl_04_45"
-            android:textSize="16sp" />
-        <RadioButton android:id="@+id/rdo0650"
+            android:gravity="center"
+            android:entries="@array/ticket_quantity_array"/>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="50dp"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp">
+
+        <Button
+            android:id="@+id/btnCheckout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_10dp"
-            android:text="@string/lbl_06_50"
-            android:textSize="16sp" />
-        <RadioButton android:id="@+id/rdo0850"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_10dp"
-            android:text="@string/lbl_08_50"
-            android:textSize="16sp" />
-    </RadioGroup>
+            android:background="@drawable/app_button"
+            android:paddingLeft="@dimen/main_screen_button_padding"
+            android:paddingRight="@dimen/main_screen_button_padding"
+            android:text="@string/lbl_checkout"
+            android:onClick="onCheckoutClick"
+            android:textColor="@android:color/white" />
+    </TableRow>
 </TableLayout>

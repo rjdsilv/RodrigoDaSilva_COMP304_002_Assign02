@@ -8,8 +8,8 @@ import android.support.v7.view.menu.MenuBuilder;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import ca.rjdsilv.rodrigodasilva_comp304_002_assign02.utils.Movie;
 import ca.rjdsilv.rodrigodasilva_comp304_002_assign02.utils.MovieData;
+import ca.rjdsilv.rodrigodasilva_comp304_002_assign02.utils.MovieUtils;
 
 /**
  * Shows the list of movies in a options menu.
@@ -56,7 +56,7 @@ public class MovieListActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         final Intent intent = new Intent(this, MovieShowtimeActivity.class);
-        MovieData.getInstance().setName(Movie.movieName(item.getItemId(), getResources()));
+        MovieData.getInstance().setName(MovieUtils.movieName(item.getItemId(), getResources()));
         startActivity(intent);
         return true;
     }

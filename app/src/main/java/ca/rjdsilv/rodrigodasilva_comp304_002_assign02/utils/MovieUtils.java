@@ -5,12 +5,12 @@ import android.content.res.Resources;
 import ca.rjdsilv.rodrigodasilva_comp304_002_assign02.R;
 
 /**
- * Utility class that will handle the movies.
+ * Utility class that will handle the movies by their ids..
  *
  * @author Rodrigo da Silva
  * @version 1.0.0
  */
-public class Movie {
+public class MovieUtils {
     public static String movieName(int id, Resources res) {
         switch (id) {
             case R.id.movieGlass:
