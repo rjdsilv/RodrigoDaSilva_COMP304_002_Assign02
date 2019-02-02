@@ -20,7 +20,7 @@
         android:paddingBottom="15dp"
         android:text="@string/lbl_now_playing"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="@dimen/dimen_20sp"
         android:textStyle="bold"
         android:typeface="sans" />
 </LinearLayout>

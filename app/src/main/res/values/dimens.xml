@@ -5,4 +5,5 @@
     <dimen name="movie_list_button_top">190dp</dimen>
     <dimen name="dimen_10dp">10dp</dimen>
     <dimen name="dimen_5dp">5dp</dimen>
+    <dimen name="dimen_20sp">20sp</dimen>
 </resources>

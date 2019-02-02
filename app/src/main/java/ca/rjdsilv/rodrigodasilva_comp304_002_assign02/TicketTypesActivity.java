@@ -32,7 +32,7 @@ public class TicketTypesActivity extends AppCompatActivity {
         // Sets the name of the selected movie.
         final MovieData data = MovieData.getInstance();
         final TextView movieName = findViewById(R.id.lblSelectedMovieValue);
-        movieName.setText(data.getName());
+        movieName.setText(data.getMovieName());
 
         // Sets the name of the selected movie.
         final TextView movieTime = findViewById(R.id.lblSelectedTimeValue);

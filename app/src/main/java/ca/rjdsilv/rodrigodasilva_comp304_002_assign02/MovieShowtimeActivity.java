@@ -28,7 +28,7 @@ public class MovieShowtimeActivity extends AppCompatActivity {
 
         // Sets the name of the selected movie.
         final TextView textView = findViewById(R.id.lblSelectedMovieValue);
-        textView.setText(MovieData.getInstance().getName());
+        textView.setText(MovieData.getInstance().getMovieName());
 
         // Sets the radio group event.
         final MovieShowtimeActivity currentActivity = this;

@@ -1,5 +1,6 @@
 package ca.rjdsilv.rodrigodasilva_comp304_002_assign02;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.PhoneNumberFormattingTextWatcher;
@@ -14,6 +15,7 @@ import java.util.Locale;
 
 import ca.rjdsilv.rodrigodasilva_comp304_002_assign02.utils.MovieData;
 import ca.rjdsilv.rodrigodasilva_comp304_002_assign02.utils.StringUtils;
+import ca.rjdsilv.rodrigodasilva_comp304_002_assign02.utils.TicketUtils;
 import ca.rjdsilv.rodrigodasilva_comp304_002_assign02.utils.ToastUtils;
 
 /**
@@ -63,6 +65,7 @@ public class CheckoutActivity extends AppCompatActivity {
             }
         }
     }
+
     /**
      * Creates the activity.
      *
@@ -76,7 +79,7 @@ public class CheckoutActivity extends AppCompatActivity {
         // Sets the name of the selected movie.
         final MovieData data = MovieData.getInstance();
         final TextView movieName = findViewById(R.id.lblSelectedMovieValue);
-        movieName.setText(data.getName());
+        movieName.setText(data.getMovieName());
 
         // Sets the time of the selected movie.
         final TextView movieTime = findViewById(R.id.lblSelectedTimeValue);
@@ -84,7 +87,7 @@ public class CheckoutActivity extends AppCompatActivity {
 
         // Sets the tickets of the selected movie.
         final TextView movieTickets = findViewById(R.id.lblSelectedTicketsValue);
-        movieTickets.setText(getTicketsData(data));
+        movieTickets.setText(TicketUtils.ticketsData(data));
 
         // Sets the total value to pay.
         final TextView total = findViewById(R.id.lblTotalValue);
@@ -106,29 +109,16 @@ public class CheckoutActivity extends AppCompatActivity {
      */
     public void onConfirmTicketsClick(View view) {
         if (fieldsValid()) {
-            ToastUtils.show(getApplicationContext(), "All fields are valid!");
+            final EditText txtFirstName = findViewById(R.id.txtFirstName);
+            final EditText txtLastName = findViewById(R.id.txtLastName);
+            MovieData.getInstance().setCustomerName(
+                    String.format(
+                            Locale.CANADA,
+                            "%s %s",
+                            txtFirstName.getText().toString(),
+                            txtLastName.getText().toString()));
+            startActivity(new Intent(this, ConfirmationActivity.class));
         }
-    }
-
-    /**
-     * Retrieves the data from the ticket information.
-     *
-     * @param data The data to have the data retrieved from.
-     * @return The string containing the data from the tickets quantity.
-     */
-    private String getTicketsData(MovieData data) {
-        String ticketsText = StringUtils.EMPTY;
-        if (data.getAdultQuantity() > 0) {
-            final String adultText = data.getAdultQuantity() == 1 ? "adult" : "adults";
-            ticketsText += String.format(Locale.CANADA, "%d %s", data.getAdultQuantity(), adultText);
-        }
-        if (data.getChildrenQuantity() > 0) {
-            final String childText = data.getChildrenQuantity() == 1 ? "child" : "children";
-            ticketsText += ticketsText.length() > 0
-                    ? String.format(Locale.CANADA, ", %d %s", data.getChildrenQuantity(), childText)
-                    : String.format(Locale.CANADA, "%d %s", data.getChildrenQuantity(), childText);
-        }
-        return ticketsText;
     }
 
     /**

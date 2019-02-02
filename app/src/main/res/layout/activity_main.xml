@@ -8,8 +8,8 @@
 
     <TableRow
         android:gravity="center"
-        android:paddingTop="20sp"
-        android:paddingBottom="20sp">
+        android:paddingTop="@dimen/dimen_20sp"
+        android:paddingBottom="@dimen/dimen_20sp">
 
         <ImageView
             android:id="@+id/ivwAppLogo"

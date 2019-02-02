@@ -19,7 +19,7 @@
             android:paddingBottom="@dimen/dimen_5dp"
             android:text="@string/lbl_ticket_type_selection"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/dimen_20sp"
             android:textStyle="bold"
             android:typeface="sans" />
     </TableRow>

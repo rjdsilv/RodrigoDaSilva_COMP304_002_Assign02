@@ -10,7 +10,8 @@ package ca.rjdsilv.rodrigodasilva_comp304_002_assign02.utils;
 public class MovieData {
     private static final MovieData INSTANCE = new MovieData();
 
-    private String name;
+    private String customerName;
+    private String movieName;
     private String time;
     private int adultQuantity;
     private int childrenQuantity;
@@ -18,16 +19,24 @@ public class MovieData {
     private MovieData() {
     }
 
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
     public static MovieData getInstance() {
         return INSTANCE;
     }
 
-    public String getName() {
-        return name;
+    public String getMovieName() {
+        return movieName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMovieName(String movieName) {
+        this.movieName = movieName;
     }
 
     public String getTime() {

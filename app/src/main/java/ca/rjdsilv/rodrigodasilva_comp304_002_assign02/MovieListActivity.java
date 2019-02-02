@@ -56,7 +56,7 @@ public class MovieListActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         final Intent intent = new Intent(this, MovieShowtimeActivity.class);
-        MovieData.getInstance().setName(MovieUtils.movieName(item.getItemId(), getResources()));
+        MovieData.getInstance().setMovieName(MovieUtils.movieName(item.getItemId(), getResources()));
         startActivity(intent);
         return true;
     }
