@@ -29,6 +29,6 @@ public class MovieUtils {
                 return res.getString(R.string.lbl_aquaman);
         }
 
-        return "";
+        return StringUtils.EMPTY;
     }
 }

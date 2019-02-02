@@ -54,6 +54,10 @@ public class MovieData {
         this.childrenQuantity = childrenQuantity;
     }
 
+    public float total() {
+        return adultQuantity * TicketUtils.ticketPrice(false) + childrenQuantity * TicketUtils.ticketPrice(true);
+    }
+
     public boolean hasTicketSelected() {
         return adultQuantity > 0 || childrenQuantity > 0;
     }

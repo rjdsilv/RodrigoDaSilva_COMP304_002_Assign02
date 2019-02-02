@@ -6,11 +6,13 @@
     <string name="desc_bumblebee">Bumblebee image view</string>
     <string name="desc_escape_room">Escape Room image view</string>
 
+    <string name="lbl_selected_movie">Movie name: </string>
+    <string name="lbl_selected_time">Show time:</string>
+    <string name="lbl_selected_tickets">Tickets:</string>
     <string name="lbl_buy_tickets">Buy Your Tickets</string>
     <string name="lbl_now_playing">Now Playing</string>
     <string name="lbl_show_times">Show Times</string>
     <string name="lbl_select">Select</string>
-    <string name="lbl_selected_movie">Selected movie: </string>
     <string name="lbl_glass">Glass</string>
     <string name="lbl_bumblebee">Bumblebee</string>
     <string name="lbl_escape_room">Escape Room</string>
@@ -23,11 +25,23 @@
     <string name="lbl_06_50">06:50pm</string>
     <string name="lbl_08_50">08:50pm</string>
     <string name="lbl_ticket_type_selection">Ticket selection</string>
-    <string name="lbl_selected_time">Selected time:</string>
     <string name="lbl_select_tickets">Select tickets</string>
     <string name="lbl_adult">Adult</string>
     <string name="lbl_children">Children</string>
     <string name="lbl_checkout">Checkout</string>
+    <string name="lbl_total">TOTAL:</string>
+    <string name="lbl_payment_info">Payment Info</string>
+    <string name="lbl_first_name">Enter your first name</string>
+    <string name="lbl_last_name">Enter your last name</string>
+    <string name="lbl_email_address">Enter your email address</string>
+    <string name="lbl_phone">Enter your phone</string>
+    <string name="lbl_address">Enter your address</string>
+    <string name="lbl_postal_code">Enter your postal code</string>
+    <string name="lbl_credit_card_number">Credit Card Number</string>
+    <string name="lbl_ccv">CVV</string>
+    <string name="lbl_month">Month (mm)</string>
+    <string name="lbl_year">Year (yy)</string>
+    <string name="lbl_confirm">Confirm your ticket</string>
 
     <string-array name="ticket_quantity_array">
         <item>1</item>
@@ -36,4 +50,5 @@
         <item>4</item>
         <item>5</item>
     </string-array>
+
 </resources>
