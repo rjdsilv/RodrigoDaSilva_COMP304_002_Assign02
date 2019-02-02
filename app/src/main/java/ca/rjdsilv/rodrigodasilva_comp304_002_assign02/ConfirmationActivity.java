@@ -36,7 +36,7 @@ public class ConfirmationActivity extends AppCompatActivity {
 
         // Sets the customer name.
         final TextView name = findViewById(R.id.lblNameValue);
-        name.setText(data.getCustomerName());
+        name.setText(data.getFullName());
 
         // Sets the name of the selected movie.
         final TextView movieName = findViewById(R.id.lblSelectedMovieValue);

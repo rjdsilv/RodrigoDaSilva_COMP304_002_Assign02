@@ -111,12 +111,8 @@ public class CheckoutActivity extends AppCompatActivity {
         if (fieldsValid()) {
             final EditText txtFirstName = findViewById(R.id.txtFirstName);
             final EditText txtLastName = findViewById(R.id.txtLastName);
-            MovieData.getInstance().setCustomerName(
-                    String.format(
-                            Locale.CANADA,
-                            "%s %s",
-                            txtFirstName.getText().toString(),
-                            txtLastName.getText().toString()));
+            MovieData.getInstance().setFirstName(txtFirstName.getText().toString());
+            MovieData.getInstance().setLastName(txtLastName.getText().toString());
             startActivity(new Intent(this, ConfirmationActivity.class));
         }
     }

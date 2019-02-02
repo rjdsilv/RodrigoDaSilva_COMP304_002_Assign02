@@ -1,5 +1,7 @@
 package ca.rjdsilv.rodrigodasilva_comp304_002_assign02.utils;
 
+import java.util.Locale;
+
 /**
  * Singleton class that will store all the data selected by the user in order to show all the
  * information to the user in the end.
@@ -10,21 +12,34 @@ package ca.rjdsilv.rodrigodasilva_comp304_002_assign02.utils;
 public class MovieData {
     private static final MovieData INSTANCE = new MovieData();
 
-    private String customerName;
-    private String movieName;
-    private String time;
-    private int adultQuantity;
-    private int childrenQuantity;
+    private String firstName = StringUtils.EMPTY;
+    private String lastName = StringUtils.EMPTY;
+    private String movieName = StringUtils.EMPTY;
+    private String time = StringUtils.EMPTY;
+    private int adultQuantity = 0;
+    private int childrenQuantity = 0;
 
     private MovieData() {
     }
 
-    public String getCustomerName() {
-        return customerName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFullName() {
+        return String.format(Locale.CANADA, "%s %s", firstName, lastName);
     }
 
     public static MovieData getInstance() {

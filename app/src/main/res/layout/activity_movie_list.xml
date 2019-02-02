@@ -4,22 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:stretchColumns="1"
     tools:context=".MovieListActivity">
 
     <TextView
         android:id="@+id/lblNowPlaying"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dimen_10dp"
         android:layout_weight="1"
         android:background="@color/colorAccent"
         android:paddingStart="@dimen/dimen_10dp"
-        android:paddingTop="15dp"
+        android:paddingTop="@dimen/dimen_15dp"
         android:paddingEnd="@dimen/dimen_10dp"
-        android:paddingBottom="15dp"
+        android:paddingBottom="@dimen/dimen_15dp"
         android:text="@string/lbl_now_playing"
         android:textColor="@android:color/white"
+        android:textSize="@dimen/dimen_20sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/lblInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_weight="1"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingTop="@dimen/dimen_15dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_15dp"
+        android:text="@string/lbl_instructions"
         android:textSize="@dimen/dimen_20sp"
         android:textStyle="bold"
         android:typeface="sans" />

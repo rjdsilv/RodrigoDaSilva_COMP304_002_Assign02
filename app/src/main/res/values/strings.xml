@@ -45,6 +45,7 @@
     <string name="lbl_order_confirmation">Order Confirmation</string>
     <string name="lbl_cust_name">Name:</string>
     <string name="lbl_order">Order:</string>
+    <string name="lbl_instructions">To select the desired movie, please click on the menu at the top right.</string>
 
     <string-array name="ticket_quantity_array">
         <item>1</item>
