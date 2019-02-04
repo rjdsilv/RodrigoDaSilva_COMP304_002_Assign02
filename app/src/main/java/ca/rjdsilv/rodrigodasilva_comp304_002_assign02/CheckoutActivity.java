@@ -227,7 +227,7 @@ public class CheckoutActivity extends AppCompatActivity {
     }
 
     /**
-     * Validates the credit card field.
+     * Validates the credit card field. The credit card must be valid according to Luhn's algorithm.
      *
      * @return <b>true</b> if the credit card is valid. <b>false</b> otherwise
      */
